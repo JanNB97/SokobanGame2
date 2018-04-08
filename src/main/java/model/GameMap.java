@@ -199,17 +199,11 @@ public class GameMap
     {
         if(obj instanceof GameMap)
         {
-            if(player.equals(((GameMap) obj).getPlayer()) == false)
-            {
-                return false;
-            }
-
             for(int i = 0; i < maxHeight; i++)
             {
                 for(int j = 0; j < maxWidth; j++)
                 {
                     // Other blocks are of no importance
-
                     if(allBlocks[i][j] instanceof Meadow)
                     {
                         Meadow block = (Meadow)allBlocks[i][j];
@@ -223,6 +217,14 @@ public class GameMap
                         }
                     }
                 }
+            }
+
+            GameMap objGameMap = (GameMap)obj;
+            Player objPlayer = ((GameMap) obj).getPlayer();
+
+            if(player.equals(objPlayer) == false && getReachableMeadows(player.getMeadow()).contains(objPlayer.getMeadow()) == false)
+            {
+                return false;
             }
 
             return true;
@@ -270,6 +272,10 @@ public class GameMap
                     {
                         builder.append(" ");
                     }
+                }
+                else
+                {
+                    builder.append(" ");
                 }
             }
 

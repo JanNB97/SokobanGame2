@@ -27,7 +27,7 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        gameMap = GameMapGenerator.generate(15, 15, 2, 40);
+        gameMap = GameMapGenerator.generate(8, 8, 3, 20);
         gameMapDrawer = new GameMapDrawer(mainVBox, gameMap);
         gameMapDrawer.draw();
         new Thread(() -> System.out.println(GameMapTester.solutionExists(gameMap))).start();
