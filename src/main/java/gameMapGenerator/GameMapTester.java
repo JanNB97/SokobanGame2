@@ -9,10 +9,10 @@ public class GameMapTester
 {
     public static boolean solutionExists(GameMap gameMap)
     {
-        return foundSolution(new ArrayList<>(), gameMap);
+        return foundSolution(new ArrayList<>(), gameMap, 0);
     }
 
-    private static boolean foundSolution(ArrayList<GameMap> visitedGameMaps, GameMap gameMap)
+    private static boolean foundSolution(ArrayList<GameMap> visitedGameMaps, GameMap gameMap, int noOfMoves)
     {
         if(gameMap.isFinished())
         {
@@ -27,10 +27,14 @@ public class GameMapTester
 
             if(visitedGameMaps.contains(gameMapClone) == false)
             {
-                ArrayList<GameMap> visitedGameMapsClone = new ArrayList<>(visitedGameMaps);
-                visitedGameMapsClone.add(gameMapClone);
+                while (visitedGameMaps.size() > noOfMoves)
+                {
+                    visitedGameMaps.remove(visitedGameMaps.size() - 1);
+                }
 
-                if(foundSolution(visitedGameMapsClone, gameMapClone))
+                visitedGameMaps.add(gameMapClone);
+
+                if(foundSolution(visitedGameMaps, gameMapClone, noOfMoves + 1))
                 {
                     return true;
                 }

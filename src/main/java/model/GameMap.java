@@ -170,26 +170,18 @@ public class GameMap
         return move.doOn(this);
     }
 
-    public ArrayList<Meadow> getReachableMeadows(ArrayList<Meadow> reachableMeadows, Block block)
+    public ArrayList<Meadow> getReachableMeadows(Block block)
     {
-        if(block.isFree())
-        {
-            reachableMeadows.add((Meadow)block);
-
-            addReachableMeadows(reachableMeadows, block, Direction.NORTH);
-            addReachableMeadows(reachableMeadows, block, Direction.EAST);
-            addReachableMeadows(reachableMeadows, block, Direction.SOUTH);
-            addReachableMeadows(reachableMeadows, block, Direction.WEST);
-        }
-
-        return reachableMeadows;
+        ArrayList<Meadow> a = new ArrayList<>();
+        getReachableMeadows(a, block);
+        return a;
     }
 
     public ArrayList<Move> getAllMoves()
     {
         ArrayList<Move> allMoves = new ArrayList<>();
 
-        for(Meadow meadow : getReachableMeadows(new ArrayList<>(), player.getMeadow()))
+        for(Meadow meadow : getReachableMeadows(player.getMeadow()))
         {
             addAllMoves(meadow, Direction.NORTH, allMoves);
             addAllMoves(meadow, Direction.EAST, allMoves);
@@ -223,10 +215,9 @@ public class GameMap
                         Meadow block = (Meadow)allBlocks[i][j];
                         Meadow objBlock = (Meadow)((GameMap) obj).getBlock(j, i);
 
+                        // Box Destinations are final
                         if(block.getBox() != null && objBlock.getBox() == null
-                                || block.getBox() == null && objBlock.getBox() != null
-                                || block.getBoxDestination() != null && objBlock.getBoxDestination() == null
-                                || block.getBoxDestination() == null && objBlock.getBoxDestination() != null)
+                                || block.getBox() == null && objBlock.getBox() != null)
                         {
                             return false;
                         }
@@ -242,17 +233,71 @@ public class GameMap
         }
     }
 
+    @Override
+    public String toString()
+    {
+        StringBuilder builder = new StringBuilder();
+
+        for(int i = 0; i < maxHeight; i++)
+        {
+            for(int j = 0; j < maxWidth; j++)
+            {
+                Block block = getBlock(j, i);
+
+                if(block instanceof OutsideBlock)
+                {
+                    builder.append(" ");
+                }
+                else if(block instanceof Wall)
+                {
+                    builder.append("O");
+                }
+                else if(block instanceof Meadow)
+                {
+                    if(((Meadow) block).getBox() != null)
+                    {
+                        builder.append("k");
+                    }
+                    else if(((Meadow) block).getPlayer() != null)
+                    {
+                        builder.append("p");
+                    }
+                    else if(((Meadow) block).getBoxDestination() != null)
+                    {
+                        builder.append(".");
+                    }
+                    else
+                    {
+                        builder.append(" ");
+                    }
+                }
+            }
+
+            builder.append(System.lineSeparator());
+        }
+
+        return builder.toString();
+    }
 
     // --- Supporting methods ---
+
+    private void getReachableMeadows(ArrayList<Meadow> reachableMeadows, Block block)
+    {
+        if(block.isFree() && reachableMeadows.contains(block) == false)
+        {
+            reachableMeadows.add((Meadow)block);
+
+            addReachableMeadows(reachableMeadows, block, Direction.NORTH);
+            addReachableMeadows(reachableMeadows, block, Direction.EAST);
+            addReachableMeadows(reachableMeadows, block, Direction.SOUTH);
+            addReachableMeadows(reachableMeadows, block, Direction.WEST);
+        }
+    }
 
     private void addReachableMeadows(ArrayList<Meadow> reachableMeadows, Block block, Direction direction)
     {
         Block blockInDirection = getBlockInDirection(block, direction);
-
-        if(reachableMeadows.contains(blockInDirection) == false)
-        {
-            reachableMeadows.addAll(getReachableMeadows(reachableMeadows, blockInDirection));
-        }
+        getReachableMeadows(reachableMeadows, blockInDirection);
     }
 
     private boolean isBorderMeadow(Meadow meadow)

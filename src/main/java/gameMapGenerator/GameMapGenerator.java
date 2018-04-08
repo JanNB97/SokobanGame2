@@ -12,20 +12,23 @@ public class GameMapGenerator
     {
         GameMap gameMap = new GameMap(maxWidth, maxHeight);
 
-        builtWallBorder(gameMap, maxWidth, maxHeight);
-        ArrayList<Meadow> allMeadows = addMeadows(gameMap, noOfMeadows, maxWidth, maxHeight);
-        removeWallBorder(gameMap, maxWidth, maxHeight);
+        builtWallBorder(gameMap);
+        ArrayList<Meadow> allMeadows = addMeadows(gameMap, noOfMeadows);
+        removeWallBorder(gameMap);
 
-        builtWallAroundMeadow(gameMap, maxWidth, maxHeight);
+        builtWallAroundMeadow(gameMap);
 
         setPlayer(gameMap, allMeadows);
-        setBoxAndDestinations(gameMap, maxWidth, maxHeight, allMeadows, noOfBoxes);
+        setBoxAndDestinations(gameMap, allMeadows, noOfBoxes);
 
         return gameMap;
     }
 
-    private static ArrayList<Meadow> addMeadows(GameMap gameMap, int noOfMeadows, int maxWidth, int maxHeight)
+    private static ArrayList<Meadow> addMeadows(GameMap gameMap, int noOfMeadows)
     {
+        int maxHeight = gameMap.getMaxHeight();
+        int maxWidth = gameMap.getMaxWidth();
+
         ArrayList<Meadow> allMeadows = new ArrayList<Meadow>();
 
         Meadow startMeadow = new Meadow(maxWidth / 2, maxHeight / 2);
@@ -49,8 +52,11 @@ public class GameMapGenerator
         return allMeadows;
     }
 
-    private static void builtWallBorder(GameMap gameMap, int maxWidth, int maxHeight)
+    private static void builtWallBorder(GameMap gameMap)
     {
+        int maxHeight = gameMap.getMaxHeight();
+        int maxWidth = gameMap.getMaxWidth();
+
         for(int i = 0; i < maxWidth; i++)
         {
             gameMap.addBlock(new Wall(i, 0));
@@ -64,8 +70,11 @@ public class GameMapGenerator
         }
     }
 
-    private static void removeWallBorder(GameMap gameMap, int maxWidth, int maxHeight)
+    private static void removeWallBorder(GameMap gameMap)
     {
+        int maxHeight = gameMap.getMaxHeight();
+        int maxWidth = gameMap.getMaxWidth();
+
         for(int i = 0; i < maxWidth; i++)
         {
             gameMap.addBlock(new OutsideBlock(i, 0));
@@ -79,8 +88,11 @@ public class GameMapGenerator
         }
     }
 
-    private static void builtWallAroundMeadow(GameMap gameMap, int maxWidth, int maxHeight)
+    public static void builtWallAroundMeadow(GameMap gameMap)
     {
+        int maxHeight = gameMap.getMaxHeight();
+        int maxWidth = gameMap.getMaxWidth();
+
         for(int i = 0; i < maxHeight; i++)
         {
             for(int j = 0; j < maxWidth; j++)
@@ -107,7 +119,7 @@ public class GameMapGenerator
         gameMap.setPlayer(player);
     }
 
-    private static void setBoxAndDestinations(GameMap gameMap, int maxWidth, int maxHeight, ArrayList<Meadow> allMeadows, int noOfBoxes)
+    private static void setBoxAndDestinations(GameMap gameMap, ArrayList<Meadow> allMeadows, int noOfBoxes)
     {
         ArrayList<Meadow> possibleMeadows = new ArrayList<>(allMeadows);
         possibleMeadows.remove(gameMap.getPlayer().getMeadow());

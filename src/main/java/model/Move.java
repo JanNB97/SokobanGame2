@@ -87,7 +87,7 @@ public class Move
 
         if(isFreeMove(startBlock, endBlock))
         {
-            ((Meadow)endBlock).setPlayer(((Meadow)startBlock).getPlayer());
+            ((Meadow)endBlock).setPlayer(gameMap.getPlayer());
             return true;
         }
 
@@ -96,7 +96,7 @@ public class Move
         if(isPushMove(startBlock, endBlock, secondBlock))
         {
             ((Meadow)secondBlock).setBox(((Meadow)endBlock).getBox());
-            ((Meadow)endBlock).setPlayer(((Meadow)startBlock).getPlayer());
+            ((Meadow)endBlock).setPlayer(gameMap.getPlayer());
 
             return true;
         }
@@ -125,6 +125,28 @@ public class Move
         return null;
     }
 
+    // --- Overritten ---
+
+    @Override
+    public String toString()
+    {
+        return "(" + x + "," + y + ") -> (" + xEnd + "," + yEnd + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if(obj instanceof Move)
+        {
+            return x == ((Move) obj).getX() && y == ((Move) obj).getY()
+                    && xEnd == ((Move) obj).getxEnd() && yEnd == ((Move) obj).getyEnd();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     // --- Supporting methods ---
 
     private boolean isFreeMove(Block startBlock, Block endBlock)
@@ -142,25 +164,7 @@ public class Move
 
     private boolean isPushMove(Block startBlock, Block endBlock, Block secondBlock)
     {
-        if(startBlock instanceof Meadow && ((Meadow) startBlock).getPlayer() != null
-                && endBlock instanceof Meadow && ((Meadow) endBlock).isFree() == false)
-        {
-            // There is a box
-            if(secondBlock instanceof Meadow && ((Meadow) secondBlock).isFree())
-            {
-                // Block after box is free
-                return true;
-            }
-            else
-            {
-                // Block after box is not free
-                return false;
-            }
-        }
-        else
-        {
-            return false;
-        }
+        return startBlock.isFree() && endBlock instanceof Meadow && ((Meadow) endBlock).isFree() == false && secondBlock.isFree();
     }
 
     // --- Getter and Setter ---

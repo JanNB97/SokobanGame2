@@ -11,6 +11,25 @@ public abstract class Block
         this.y = y;
     }
 
+    @Override
+    public String toString()
+    {
+        return "(" + x + "," + y + ")";
+    }
+
+    @Override
+    public boolean equals(Object obj)
+    {
+        if(obj instanceof Block)
+        {
+            return x == ((Block) obj).getX() && y == ((Block) obj).getY();
+        }
+        else
+        {
+            return false;
+        }
+    }
+
     public boolean isFree()
     {
         return this instanceof Meadow && ((Meadow)this).getBox() == null;
