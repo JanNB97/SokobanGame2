@@ -9,7 +9,7 @@ import org.junit.Test;
 public class testGameTester
 {
     @Test
-    public void getAllMovesTest2()
+    public void solutionExists()
     {
         GameMap gameMap = new GameMap(7, 7);
 

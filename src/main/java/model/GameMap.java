@@ -67,26 +67,6 @@ public class GameMap
         }
     }
 
-    public ArrayList<OutsideBlock> getBorderOutsideBlocks()
-    {
-        ArrayList<OutsideBlock> allBlocks = new ArrayList<>();
-
-        for(int i = 0; i < maxHeight; i++)
-        {
-            for(int j = 0; j < maxWidth; j++)
-            {
-                Block block = getBlock(j, i);
-
-                if(block instanceof OutsideBlock && meadowIsNeighboor(block))
-                {
-                    allBlocks.add((OutsideBlock)block);
-                }
-            }
-        }
-
-        return allBlocks;
-    }
-
     public boolean meadowIsInRange(Block block)
     {
         return getBlock(block.getX() + 1, block.getY() + 1) instanceof Meadow
@@ -102,6 +82,83 @@ public class GameMap
                 || getBlock(block.getX() + 1, block.getY()) instanceof Meadow
                 || getBlock(block.getX(), block.getY() - 1) instanceof Meadow
                 || getBlock(block.getX() - 1, block.getY()) instanceof Meadow;
+    }
+
+    public boolean isFinished()
+    {
+        for(int i = 0; i < maxHeight; i++)
+        {
+            for(int j = 0; j < maxWidth; j++)
+            {
+                Block block = getBlock(j, i);
+
+                if(block instanceof Meadow && ((Meadow) block).getBoxDestination() != null && ((Meadow) block).getBox() == null)
+                {
+                    return false;
+                }
+            }
+        }
+
+        return true;
+    }
+
+    // --- Moves ---
+
+    public boolean isPossibleMove(Move move)
+    {
+        return move.isPossibleOn(this);
+    }
+
+    public boolean doMove(Move move)
+    {
+        return move.doOn(this);
+    }
+
+    public ArrayList<Move> getAllMoves()
+    {
+        ArrayList<Move> allMoves = new ArrayList<>();
+
+        for(Meadow meadow : getReachableMeadows(player.getMeadow()))
+        {
+            addAllMoves(meadow, Direction.NORTH, allMoves);
+            addAllMoves(meadow, Direction.EAST, allMoves);
+            addAllMoves(meadow, Direction.SOUTH, allMoves);
+            addAllMoves(meadow, Direction.WEST, allMoves);
+        }
+
+        return allMoves;
+    }
+
+    // --- Get meadows or blocks ---
+
+    public ArrayList<Meadow> getReachableMeadows(Block block)
+    {
+        ArrayList<Meadow> a = new ArrayList<>();
+        getReachableMeadows(a, block);
+        return a;
+    }
+
+    public ArrayList<Meadow> getMeadowsWithBoxDestination()
+    {
+        ArrayList<Meadow> allMeadowsWithBoxDestination = new ArrayList<>();
+
+        for(int i = 0; i < maxHeight; i++)
+        {
+            for(int j = 0; j < maxWidth; j++)
+            {
+                Block block = getBlock(j, i);
+
+                if(block instanceof Meadow)
+                {
+                    if(((Meadow) block).getBoxDestination() != null)
+                    {
+                        allMeadowsWithBoxDestination.add((Meadow)block);
+                    }
+                }
+            }
+        }
+
+        return allMeadowsWithBoxDestination;
     }
 
     public Block getBlockInDirection(Block block, Direction direction)
@@ -140,57 +197,31 @@ public class GameMap
         return null;
     }
 
-    public boolean isFinished()
+    public Block getBlockInDirection(Block block, Direction direction, int fields)
     {
+        return getBlockInDirection(block.getX(), block.getY(), direction, fields);
+    }
+
+    public ArrayList<OutsideBlock> getBorderOutsideBlocks()
+    {
+        ArrayList<OutsideBlock> allBlocks = new ArrayList<>();
+
         for(int i = 0; i < maxHeight; i++)
         {
             for(int j = 0; j < maxWidth; j++)
             {
                 Block block = getBlock(j, i);
 
-                if(block instanceof Meadow && ((Meadow) block).getBoxDestination() != null && ((Meadow) block).getBox() == null)
+                if(block instanceof OutsideBlock && meadowIsNeighboor(block))
                 {
-                    return false;
+                    allBlocks.add((OutsideBlock)block);
                 }
             }
         }
 
-        return true;
+        return allBlocks;
     }
 
-    // --- Moves ---
-
-    public boolean isPossibleMove(Move move)
-    {
-        return move.isPossibleOn(this);
-    }
-
-    public boolean doMove(Move move)
-    {
-        return move.doOn(this);
-    }
-
-    public ArrayList<Meadow> getReachableMeadows(Block block)
-    {
-        ArrayList<Meadow> a = new ArrayList<>();
-        getReachableMeadows(a, block);
-        return a;
-    }
-
-    public ArrayList<Move> getAllMoves()
-    {
-        ArrayList<Move> allMoves = new ArrayList<>();
-
-        for(Meadow meadow : getReachableMeadows(player.getMeadow()))
-        {
-            addAllMoves(meadow, Direction.NORTH, allMoves);
-            addAllMoves(meadow, Direction.EAST, allMoves);
-            addAllMoves(meadow, Direction.SOUTH, allMoves);
-            addAllMoves(meadow, Direction.WEST, allMoves);
-        }
-
-        return allMoves;
-    }
 
     // --- Overritten methods ---
 
@@ -199,6 +230,8 @@ public class GameMap
     {
         if(obj instanceof GameMap)
         {
+            Player objPlayer = ((GameMap) obj).getPlayer();
+
             for(int i = 0; i < maxHeight; i++)
             {
                 for(int j = 0; j < maxWidth; j++)
@@ -220,7 +253,6 @@ public class GameMap
             }
 
             GameMap objGameMap = (GameMap)obj;
-            Player objPlayer = ((GameMap) obj).getPlayer();
 
             if(player.equals(objPlayer) == false && getReachableMeadows(player.getMeadow()).contains(objPlayer.getMeadow()) == false)
             {

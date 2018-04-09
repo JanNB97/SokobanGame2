@@ -20,7 +20,6 @@ public class Player
     {
         if(obj instanceof Player)
         {
-            //TODO - Could be improved
             return meadow.getX() == ((Player) obj).getMeadow().getX() && meadow.getY() == ((Player) obj).getMeadow().getY();
         }
         else

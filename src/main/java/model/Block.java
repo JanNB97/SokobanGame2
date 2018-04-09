@@ -30,6 +30,13 @@ public abstract class Block
         }
     }
 
+    public boolean hasFinishedBox()
+    {
+        return this instanceof Meadow
+                && ((Meadow) this).getBoxDestination() != null
+                && ((Meadow) this).getBox() != null;
+    }
+
     public boolean isFree()
     {
         return this instanceof Meadow && ((Meadow)this).getBox() == null;

@@ -27,10 +27,10 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        gameMap = GameMapGenerator.generate(8, 8, 3, 20);
+        gameMap = GameMapGenerator.generate(10, 10, 3, 30);
         gameMapDrawer = new GameMapDrawer(mainVBox, gameMap);
         gameMapDrawer.draw();
-        new Thread(() -> System.out.println(GameMapTester.solutionExists(gameMap))).start();
+        new Thread(() -> System.out.println(gameMap.toString() + System.lineSeparator() + GameMapTester.solutionExists(gameMap))).start();
     }
 
     // --- Handle Clicks and Keys ---

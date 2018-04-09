@@ -188,4 +188,9 @@ public class Move
     {
         return yEnd;
     }
+
+    public Direction getDirection()
+    {
+        return direction;
+    }
 }

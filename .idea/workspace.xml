@@ -3,9 +3,22 @@
   <component name="ChangeListManager">
     <list default="true" id="cd7a7547-3921-4623-8c43-4ce9b987203d" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/enums/Direction.class" afterPath="$PROJECT_DIR$/out/production/classes/enums/Direction.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/gameMapGenerator/GameMapTester.class" afterPath="$PROJECT_DIR$/out/production/classes/gameMapGenerator/GameMapTester.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/main/MainController.class" afterPath="$PROJECT_DIR$/out/production/classes/main/MainController.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/model/Block.class" afterPath="$PROJECT_DIR$/out/production/classes/model/Block.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/model/GameMap$1.class" afterPath="$PROJECT_DIR$/out/production/classes/model/GameMap$1.class" />
       <change beforePath="$PROJECT_DIR$/out/production/classes/model/GameMap.class" afterPath="$PROJECT_DIR$/out/production/classes/model/GameMap.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/model/Move.class" afterPath="$PROJECT_DIR$/out/production/classes/model/Move.class" />
+      <change beforePath="$PROJECT_DIR$/out/production/classes/model/Player.class" afterPath="$PROJECT_DIR$/out/production/classes/model/Player.class" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/enums/Direction.java" afterPath="$PROJECT_DIR$/src/main/java/enums/Direction.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java" afterPath="$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/main/MainController.java" afterPath="$PROJECT_DIR$/src/main/java/main/MainController.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Block.java" afterPath="$PROJECT_DIR$/src/main/java/model/Block.java" />
       <change beforePath="$PROJECT_DIR$/src/main/java/model/GameMap.java" afterPath="$PROJECT_DIR$/src/main/java/model/GameMap.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Move.java" afterPath="$PROJECT_DIR$/src/main/java/model/Move.java" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/model/Player.java" afterPath="$PROJECT_DIR$/src/main/java/model/Player.java" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java" afterPath="$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java" />
     </list>
     <ignored path="$PROJECT_DIR$/out/" />
     <ignored path="$PROJECT_DIR$/.gradle/" />
@@ -24,22 +37,24 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="GameMap.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="GameMap.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/GameMap.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="1144">
-              <caret line="198" column="4" lean-forward="false" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+            <state relative-caret-position="415">
+              <caret line="200" column="4" lean-forward="false" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
               <folding>
                 <element signature="method#GameMap#0;class#GameMap#0" expanded="false" />
                 <element signature="method#GameMap#1;class#GameMap#0" expanded="false" />
-                <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
                 <element signature="method#meadowIsInRange#0;class#GameMap#0" expanded="false" />
                 <element signature="method#meadowIsNeighboor#0;class#GameMap#0" expanded="false" />
+                <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
+                <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+                <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
+                <element signature="method#getMeadowsWithBoxDestination#0;class#GameMap#0" expanded="false" />
                 <element signature="method#getBlockInDirection#0;class#GameMap#0" expanded="false" />
                 <element signature="method#getBlockInDirection#1;class#GameMap#0" expanded="false" />
-                <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
-                <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
-                <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+                <element signature="method#getBlockInDirection#2;class#GameMap#0" expanded="false" />
+                <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
                 <element signature="method#equals#0;class#GameMap#0" expanded="false" />
                 <element signature="method#toString#0;class#GameMap#0" expanded="false" />
                 <element signature="method#getReachableMeadows#1;class#GameMap#0" expanded="false" />
@@ -52,34 +67,49 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Player.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Player.java">
+      <file leaf-file-name="GameMapTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+            <state relative-caret-position="89">
+              <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
               <folding>
-                <element signature="method#Player#0;class#Player#0" expanded="false" />
-                <element signature="method#equals#0;class#Player#0" expanded="false" />
+                <element signature="e#188#189#0" expanded="true" />
+                <element signature="e#252#253#0" expanded="true" />
+                <element signature="method#isDeadAtStart#0;class#GameMapTester#0" expanded="false" />
+                <element signature="method#boxInWallTrianlge#0;class#GameMapTester#0" expanded="false" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainApplication.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/main/MainApplication.java">
+      <file leaf-file-name="testGameTester.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="264">
-              <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+            <state relative-caret-position="453">
+              <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="false">
+      <file leaf-file-name="Direction.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/enums/Direction.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="154">
+              <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+              <folding>
+                <element signature="method#getClockwise#0;class#Direction#0" expanded="false" />
+                <element signature="method#getAgainstClockwise#0;class#Direction#0" expanded="false" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MainController.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="330">
-              <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+              <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
               <folding>
                 <element signature="method#handleClickedOnUndo#0;class#MainController#0" expanded="false" />
                 <element signature="method#handleTypedOnKey#0;class#MainController#0" expanded="false" />
@@ -88,14 +118,15 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="GameMapTester.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java">
+      <file leaf-file-name="Block.java" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/main/java/model/Block.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="587">
-              <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+            <state relative-caret-position="396">
+              <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
               <folding>
-                <element signature="e#189#190#0" expanded="true" />
-                <element signature="e#256#257#0" expanded="true" />
+                <element signature="method#Block#0;class#Block#0" expanded="false" />
+                <element signature="method#equals#0;class#Block#0" expanded="false" />
+                <element signature="method#hasFinishedBox#0;class#Block#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -104,30 +135,17 @@
       <file leaf-file-name="Move.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/model/Move.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="272">
-              <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+            <state relative-caret-position="618">
+              <caret line="191" column="35" lean-forward="false" selection-start-line="191" selection-start-column="35" selection-end-line="191" selection-end-column="35" />
               <folding>
                 <element signature="method#Move#0;class#Move#0" expanded="false" />
                 <element signature="method#isPossibleOn#0;class#Move#0" expanded="false" />
                 <element signature="method#isPushMoveOn#0;class#Move#0" expanded="false" />
+                <element signature="method#doOn#0;class#Move#0" expanded="false" />
                 <element signature="method#getMove#0;class#Move#0" expanded="false" />
                 <element signature="method#equals#0;class#Move#0" expanded="false" />
                 <element signature="method#isFreeMove#0;class#Move#0" expanded="false" />
                 <element signature="method#isPushMove#0;class#Move#0" expanded="false" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Meadow.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/main/java/model/Meadow.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="281">
-              <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-              <folding>
-                <element signature="e#306#307#0" expanded="true" />
-                <element signature="e#332#333#0" expanded="true" />
-                <element signature="method#setBox#0;class#Meadow#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -440,14 +458,15 @@
       <list>
         <option value="$PROJECT_DIR$/src/main/resources/propertiesFile.properties" />
         <option value="$PROJECT_DIR$/src/main/java/tools/PropertyMan.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Meadow.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Block.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapGenerator.java" />
         <option value="$PROJECT_DIR$/src/test/java/testModel/testGameMap.java" />
-        <option value="$PROJECT_DIR$/src/main/java/model/Move.java" />
-        <option value="$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/Player.java" />
         <option value="$PROJECT_DIR$/src/main/java/model/GameMap.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Meadow.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Block.java" />
+        <option value="$PROJECT_DIR$/src/main/java/model/Move.java" />
+        <option value="$PROJECT_DIR$/src/main/java/enums/Direction.java" />
+        <option value="$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java" />
         <option value="$PROJECT_DIR$/src/main/java/main/MainController.java" />
       </list>
@@ -460,8 +479,8 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds" extendedState="6">
-    <option name="x" value="-8" />
-    <option name="y" value="-8" />
+    <option name="x" value="50" />
+    <option name="y" value="-17" />
     <option name="width" value="1936" />
     <option name="height" value="1096" />
   </component>
@@ -480,7 +499,7 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
+      <pane id="Scratches" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
@@ -505,6 +524,14 @@
               <item name="src" type="462c0819:PsiDirectoryNode" />
               <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
               <item name="java" type="462c0819:PsiDirectoryNode" />
+            </path>
+            <path>
+              <item name="SokobanGame2" type="b2602c69:ProjectViewProjectNode" />
+              <item name="SokobanGame2" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="src" type="462c0819:PsiDirectoryNode" />
+              <item name="main" type="8a07ba80:GradleTreeStructureProvider$GradleModuleDirectoryNode" />
+              <item name="java" type="462c0819:PsiDirectoryNode" />
+              <item name="enums" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="SokobanGame2" type="b2602c69:ProjectViewProjectNode" />
@@ -563,9 +590,9 @@
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
       <pane id="AndroidView" />
-      <pane id="Scratches" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -765,61 +792,62 @@
       <workItem from="1523181644438" duration="20000" />
       <workItem from="1523181820975" duration="708000" />
       <workItem from="1523188176488" duration="8595000" />
+      <workItem from="1523255936917" duration="6896000" />
     </task>
     <servers />
   </component>
   <component name="TestHistory">
-    <history-entry file="All_in_SokobanGame2_test - 2018.04.08 at 15h 08m 20s.xml">
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 19m 19s.xml">
       <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 55m 54s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 20m 12s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 56m 28s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 20m 16s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 56m 57s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 21m 36s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 59m 11s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 31m 23s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 59m 34s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 31m 27s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 14h 59m 59s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 32m 47s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 15h 04m 22s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 34m 45s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 15h 06m 56s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 35m 23s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
-    <history-entry file="testGameTester - 2018.04.08 at 15h 07m 01s.xml">
-      <configuration name="testGameTester" configurationId="JUnit" />
+    <history-entry file="All_in_SokobanGame2_test - 2018.04.09 at 10h 35m 26s.xml">
+      <configuration name="All in SokobanGame2_test" configurationId="JUnit" />
     </history-entry>
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="9533000" />
+    <option name="totallyTimeSpent" value="16429000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1936" height="1096" extended-state="6" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.5394191" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.18983403" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33195022" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.27178425" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.12686567" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.1380597" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -827,7 +855,7 @@
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.20643154" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32572615" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -845,11 +873,125 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <option name="time" value="35" />
+      <breakpoints>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java</url>
+          <line>71</line>
+          <properties />
+          <option name="timeStamp" value="37" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="java-line">
+          <url>file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java</url>
+          <line>23</line>
+          <properties />
+          <option name="timeStamp" value="38" />
+        </line-breakpoint>
+      </breakpoints>
+      <option name="time" value="40" />
     </breakpoint-manager>
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/GameMap.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="method#GameMap#0;class#GameMap#0" expanded="false" />
+            <element signature="method#GameMap#1;class#GameMap#0" expanded="false" />
+            <element signature="method#meadowIsInRange#0;class#GameMap#0" expanded="false" />
+            <element signature="method#meadowIsNeighboor#0;class#GameMap#0" expanded="false" />
+            <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getMeadowsWithBoxDestination#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlockInDirection#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlockInDirection#1;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlockInDirection#2;class#GameMap#0" expanded="false" />
+            <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
+            <element signature="method#equals#0;class#GameMap#0" expanded="false" />
+            <element signature="method#toString#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getReachableMeadows#1;class#GameMap#0" expanded="false" />
+            <element signature="method#addReachableMeadows#0;class#GameMap#0" expanded="false" />
+            <element signature="method#isBorderMeadow#0;class#GameMap#0" expanded="false" />
+            <element signature="method#addAllMoves#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlock#0;class#GameMap#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Player.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+          <folding>
+            <element signature="method#Player#0;class#Player#0" expanded="false" />
+            <element signature="method#equals#0;class#Player#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainApplication.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="264">
+          <caret line="19" column="0" lean-forward="false" selection-start-line="19" selection-start-column="0" selection-end-line="19" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
+          <folding>
+            <element signature="method#initialize#0;class#MainController#0" expanded="false" />
+            <element signature="method#handleClickedOnUndo#0;class#MainController#0" expanded="false" />
+            <element signature="method#handleTypedOnKey#0;class#MainController#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="770">
+          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
+          <folding>
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="method#isDeadAtStart#0;class#GameMapTester#0" expanded="false" />
+            <element signature="method#boxInWallTrianlge#0;class#GameMapTester#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="682">
+          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
+          <folding>
+            <element signature="method#Move#0;class#Move#0" expanded="false" />
+            <element signature="method#isPossibleOn#0;class#Move#0" expanded="false" />
+            <element signature="method#isPushMoveOn#0;class#Move#0" expanded="false" />
+            <element signature="method#getMove#0;class#Move#0" expanded="false" />
+            <element signature="method#equals#0;class#Move#0" expanded="false" />
+            <element signature="method#isFreeMove#0;class#Move#0" expanded="false" />
+            <element signature="method#isPushMove#0;class#Move#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Meadow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="616">
+          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
+          <folding>
+            <element signature="e#306#307#0" expanded="false" />
+            <element signature="e#332#333#0" expanded="false" />
+            <element signature="method#setBox#0;class#Meadow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/test/java/testModel/testGameMap.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -868,17 +1010,22 @@
           <folding>
             <element signature="method#GameMap#0;class#GameMap#0" expanded="false" />
             <element signature="method#GameMap#1;class#GameMap#0" expanded="false" />
-            <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
             <element signature="method#meadowIsInRange#0;class#GameMap#0" expanded="false" />
             <element signature="method#meadowIsNeighboor#0;class#GameMap#0" expanded="false" />
+            <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getMeadowsWithBoxDestination#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlockInDirection#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlockInDirection#1;class#GameMap#0" expanded="false" />
-            <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
-            <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlockInDirection#2;class#GameMap#0" expanded="false" />
+            <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
             <element signature="method#equals#0;class#GameMap#0" expanded="false" />
+            <element signature="method#toString#0;class#GameMap#0" expanded="false" />
             <element signature="method#getReachableMeadows#1;class#GameMap#0" expanded="false" />
             <element signature="method#addReachableMeadows#0;class#GameMap#0" expanded="false" />
             <element signature="method#isBorderMeadow#0;class#GameMap#0" expanded="false" />
+            <element signature="method#addAllMoves#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlock#0;class#GameMap#0" expanded="false" />
           </folding>
         </state>
@@ -1047,19 +1194,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Block.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="374">
-          <caret line="32" column="19" lean-forward="false" selection-start-line="32" selection-start-column="19" selection-end-line="32" selection-end-column="19" />
-          <folding>
-            <element signature="method#Block#0;class#Block#0" expanded="false" />
-            <element signature="method#equals#0;class#Block#0" expanded="false" />
-            <element signature="e#561#562#0" expanded="true" />
-            <element signature="e#641#642#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapGenerator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="396">
@@ -1097,66 +1231,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Meadow.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="281">
-          <caret line="56" column="16" lean-forward="false" selection-start-line="56" selection-start-column="16" selection-end-line="56" selection-end-column="16" />
-          <folding>
-            <element signature="e#306#307#0" expanded="true" />
-            <element signature="e#332#333#0" expanded="true" />
-            <element signature="method#setBox#0;class#Meadow#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="780">
-          <caret line="41" column="64" lean-forward="false" selection-start-line="41" selection-start-column="64" selection-end-line="41" selection-end-column="64" />
-          <folding>
-            <element signature="imports" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/model/Move.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="272">
-          <caret line="90" column="24" lean-forward="true" selection-start-line="90" selection-start-column="24" selection-end-line="90" selection-end-column="24" />
-          <folding>
-            <element signature="method#Move#0;class#Move#0" expanded="false" />
-            <element signature="method#isPossibleOn#0;class#Move#0" expanded="false" />
-            <element signature="method#isPushMoveOn#0;class#Move#0" expanded="false" />
-            <element signature="method#getMove#0;class#Move#0" expanded="false" />
-            <element signature="method#equals#0;class#Move#0" expanded="false" />
-            <element signature="method#isFreeMove#0;class#Move#0" expanded="false" />
-            <element signature="method#isPushMove#0;class#Move#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="587">
-          <caret line="41" column="9" lean-forward="false" selection-start-line="41" selection-start-column="9" selection-end-line="41" selection-end-column="9" />
-          <folding>
-            <element signature="e#189#190#0" expanded="true" />
-            <element signature="e#256#257#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="29" column="51" lean-forward="false" selection-start-line="29" selection-start-column="51" selection-end-line="29" selection-end-column="51" />
-          <folding>
-            <element signature="method#handleClickedOnUndo#0;class#MainController#0" expanded="false" />
-            <element signature="method#handleTypedOnKey#0;class#MainController#0" expanded="false" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/main/MainApplication.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="264">
@@ -1167,30 +1241,31 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/Player.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="15" column="5" lean-forward="false" selection-start-line="15" selection-start-column="5" selection-end-line="15" selection-end-column="5" />
+        <state relative-caret-position="347">
+          <caret line="21" column="9" lean-forward="false" selection-start-line="21" selection-start-column="9" selection-end-line="21" selection-end-column="9" />
           <folding>
             <element signature="method#Player#0;class#Player#0" expanded="false" />
-            <element signature="method#equals#0;class#Player#0" expanded="false" />
           </folding>
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/model/GameMap.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1144">
-          <caret line="198" column="4" lean-forward="false" selection-start-line="198" selection-start-column="4" selection-end-line="198" selection-end-column="4" />
+        <state relative-caret-position="415">
+          <caret line="200" column="4" lean-forward="false" selection-start-line="200" selection-start-column="4" selection-end-line="200" selection-end-column="4" />
           <folding>
             <element signature="method#GameMap#0;class#GameMap#0" expanded="false" />
             <element signature="method#GameMap#1;class#GameMap#0" expanded="false" />
-            <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
             <element signature="method#meadowIsInRange#0;class#GameMap#0" expanded="false" />
             <element signature="method#meadowIsNeighboor#0;class#GameMap#0" expanded="false" />
+            <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getMeadowsWithBoxDestination#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlockInDirection#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlockInDirection#1;class#GameMap#0" expanded="false" />
-            <element signature="method#isFinished#0;class#GameMap#0" expanded="false" />
-            <element signature="method#getReachableMeadows#0;class#GameMap#0" expanded="false" />
-            <element signature="method#getAllMoves#0;class#GameMap#0" expanded="false" />
+            <element signature="method#getBlockInDirection#2;class#GameMap#0" expanded="false" />
+            <element signature="method#getBorderOutsideBlocks#0;class#GameMap#0" expanded="false" />
             <element signature="method#equals#0;class#GameMap#0" expanded="false" />
             <element signature="method#toString#0;class#GameMap#0" expanded="false" />
             <element signature="method#getReachableMeadows#1;class#GameMap#0" expanded="false" />
@@ -1198,6 +1273,89 @@
             <element signature="method#isBorderMeadow#0;class#GameMap#0" expanded="false" />
             <element signature="method#addAllMoves#0;class#GameMap#0" expanded="false" />
             <element signature="method#getBlock#0;class#GameMap#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Meadow.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="220">
+          <caret line="13" column="5" lean-forward="false" selection-start-line="13" selection-start-column="5" selection-end-line="13" selection-end-column="5" />
+          <folding>
+            <element signature="method#setBox#0;class#Meadow#0" expanded="false" />
+            <element signature="method#setPlayer#0;class#Meadow#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Move.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="618">
+          <caret line="191" column="35" lean-forward="false" selection-start-line="191" selection-start-column="35" selection-end-line="191" selection-end-column="35" />
+          <folding>
+            <element signature="method#Move#0;class#Move#0" expanded="false" />
+            <element signature="method#isPossibleOn#0;class#Move#0" expanded="false" />
+            <element signature="method#isPushMoveOn#0;class#Move#0" expanded="false" />
+            <element signature="method#doOn#0;class#Move#0" expanded="false" />
+            <element signature="method#getMove#0;class#Move#0" expanded="false" />
+            <element signature="method#equals#0;class#Move#0" expanded="false" />
+            <element signature="method#isFreeMove#0;class#Move#0" expanded="false" />
+            <element signature="method#isPushMove#0;class#Move#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/model/Block.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="396">
+          <caret line="33" column="4" lean-forward="false" selection-start-line="33" selection-start-column="4" selection-end-line="33" selection-end-column="4" />
+          <folding>
+            <element signature="method#Block#0;class#Block#0" expanded="false" />
+            <element signature="method#equals#0;class#Block#0" expanded="false" />
+            <element signature="method#hasFinishedBox#0;class#Block#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/enums/Direction.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="154">
+          <caret line="7" column="4" lean-forward="false" selection-start-line="7" selection-start-column="4" selection-end-line="7" selection-end-column="4" />
+          <folding>
+            <element signature="method#getClockwise#0;class#Direction#0" expanded="false" />
+            <element signature="method#getAgainstClockwise#0;class#Direction#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/test/java/testGameMapGenerator/testGameTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="453">
+          <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/gameMapGenerator/GameMapTester.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="89">
+          <caret line="106" column="0" lean-forward="false" selection-start-line="106" selection-start-column="0" selection-end-line="106" selection-end-column="0" />
+          <folding>
+            <element signature="e#188#189#0" expanded="true" />
+            <element signature="e#252#253#0" expanded="true" />
+            <element signature="method#isDeadAtStart#0;class#GameMapTester#0" expanded="false" />
+            <element signature="method#boxInWallTrianlge#0;class#GameMapTester#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/java/main/MainController.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="330">
+          <caret line="29" column="56" lean-forward="false" selection-start-line="29" selection-start-column="56" selection-end-line="29" selection-end-column="56" />
+          <folding>
+            <element signature="method#handleClickedOnUndo#0;class#MainController#0" expanded="false" />
+            <element signature="method#handleTypedOnKey#0;class#MainController#0" expanded="false" />
           </folding>
         </state>
       </provider>
