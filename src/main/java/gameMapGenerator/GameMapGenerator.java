@@ -1,10 +1,12 @@
 package gameMapGenerator;
 
+import javafx.application.Platform;
 import model.*;
 
 import java.util.ArrayList;
 import java.util.Random;
 import java.util.function.Predicate;
+import java.util.logging.Logger;
 
 public class GameMapGenerator
 {
@@ -19,6 +21,7 @@ public class GameMapGenerator
         builtWallAroundMeadow(gameMap);
 
         setPlayer(gameMap, allMeadows);
+
         setBoxAndDestinations(gameMap, allMeadows, noOfBoxes);
 
         return gameMap;
@@ -128,18 +131,51 @@ public class GameMapGenerator
 
         for(int i = 0; i < noOfBoxes; i++)
         {
-            int r = random.nextInt(possibleMeadows.size());
+            Meadow boxMeadow = null;
+            Meadow boxDesMeadow = null;
 
-            Meadow meadow = possibleMeadows.get(r);
-            meadow.setBox(new Box(meadow));
+            ArrayList<Integer> rList = new ArrayList<>();
 
-            possibleMeadows.remove(meadow);
+            do {
+                if(boxMeadow != null)
+                {
+                    boxMeadow.setBox(null);
+                    boxDesMeadow.setBoxDestination(null);
+                }
 
-            r = random.nextInt(possibleMeadows.size());
-            meadow = possibleMeadows.get(r);
-            meadow.setBoxDestination(new BoxDestination(meadow));
+                if(rList.size() == possibleMeadows.size() * (possibleMeadows.size() - 1))
+                {
+                    Logger.getGlobal().severe("For box " + (i + 1) + " was no place");
+                    return;
+                }
 
-            possibleMeadows.remove(meadow);
+                int r1 = random.nextInt(possibleMeadows.size());
+
+                boxMeadow = possibleMeadows.get(r1);
+                boxMeadow.setBox(new Box(boxMeadow));
+
+                int r2;
+                do {
+                    r2 = random.nextInt(possibleMeadows.size());
+                }
+                while (r2 == r1);
+
+                boxDesMeadow = possibleMeadows.get(r2);
+                boxDesMeadow.setBoxDestination(new BoxDestination(boxDesMeadow));
+
+                if(rList.contains(r1*possibleMeadows.size() + r2))
+                {
+                    continue;
+                }
+                else
+                {
+                    rList.add(r1 * possibleMeadows.size() + r2);
+                }
+            }
+            while(GameMapTester.solutionExists(gameMap) == false);
+
+            possibleMeadows.remove(boxMeadow);
+            possibleMeadows.remove(boxDesMeadow);
         }
     }
 }

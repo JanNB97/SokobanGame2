@@ -9,7 +9,14 @@ public class GameMapTester
 {
     public static boolean solutionExists(GameMap gameMap)
     {
-        return foundSolution(new ArrayList<>(), gameMap);
+        if(isDeadAtStart(gameMap))
+        {
+            return false;
+        }
+        else
+        {
+            return foundSolution(new ArrayList<>(), gameMap);
+        }
     }
 
     private static boolean foundSolution(ArrayList<GameMap> visitedGameMaps, GameMap gameMap)
@@ -46,7 +53,7 @@ public class GameMapTester
     {
         ArrayList<Meadow> boxDestinationMeadows = gameMap.getMeadowsWithBoxDestination();
 
-        for(Meadow meadow : boxDestinationMeadows)
+        /*for(Meadow meadow : boxDestinationMeadows)
         {
             if(meadow.getBox() == null)
             {
@@ -59,6 +66,22 @@ public class GameMapTester
                     {
                         return true;
                         //TODO
+                    }
+                }
+            }
+        }*/
+
+        for(int i = 0; i < gameMap.getMaxHeight(); i++)
+        {
+            for(int j = 0; j < gameMap.getMaxWidth(); j++)
+            {
+                Block block = gameMap.getBlock(j, i);
+
+                if(block instanceof Meadow && ((Meadow) block).getBox() != null)
+                {
+                    if(boxNowInDeadSituation(gameMap, block))
+                    {
+                        return true;
                     }
                 }
             }

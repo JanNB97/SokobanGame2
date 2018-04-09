@@ -2,6 +2,7 @@ package main;
 
 import gameMapGenerator.GameMapGenerator;
 import gameMapGenerator.GameMapTester;
+import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
 import javafx.scene.image.Image;
@@ -27,10 +28,14 @@ public class MainController implements Initializable
     @Override
     public void initialize(URL location, ResourceBundle resources)
     {
-        gameMap = GameMapGenerator.generate(10, 10, 3, 30);
-        gameMapDrawer = new GameMapDrawer(mainVBox, gameMap);
-        gameMapDrawer.draw();
-        new Thread(() -> System.out.println(gameMap.toString() + System.lineSeparator() + GameMapTester.solutionExists(gameMap))).start();
+        new Thread(() -> {
+            gameMap = GameMapGenerator.generate(15, 15, 6, 25);
+
+            Platform.runLater(() -> {
+                gameMapDrawer = new GameMapDrawer(mainVBox, gameMap);
+                gameMapDrawer.draw();
+            });
+        }).start();
     }
 
     // --- Handle Clicks and Keys ---
