@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SokobanGame2.iml" filepath="$PROJECT_DIR$/.idea/modules/SokobanGame2.iml" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SokobanGame2_main.iml" filepath="$PROJECT_DIR$/.idea/modules/SokobanGame2_main.iml" group="SokobanGame2" />
-      <module fileurl="file://$PROJECT_DIR$/.idea/modules/SokobanGame2_test.iml" filepath="$PROJECT_DIR$/.idea/modules/SokobanGame2_test.iml" group="SokobanGame2" />
+      <module fileurl="file://$PROJECT_DIR$/src/main/main.iml" filepath="$PROJECT_DIR$/src/main/main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/src/test/test.iml" filepath="$PROJECT_DIR$/src/test/test.iml" />
     </modules>
   </component>
 </project>

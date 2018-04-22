@@ -1,6 +1,6 @@
 package testGameMapGenerator;
 
-import gameMapGenerator.GameMapGenerator;
+import gameMapGenerator.TestGenerator;
 import gameMapGenerator.GameMapTester;
 import model.*;
 import org.junit.Assert;
@@ -37,7 +37,7 @@ public class testGameTester
         Meadow boxDestinationMeadow = (Meadow)gameMap.getBlock(3, 4);
         boxDestinationMeadow.setBoxDestination(new BoxDestination(boxDestinationMeadow));
 
-        GameMapGenerator.builtWallAroundMeadow(gameMap);
+        TestGenerator.builtWallAroundMeadow(gameMap);
 
         Assert.assertTrue(GameMapTester.solutionExists(gameMap));
     }

@@ -1,18 +1,15 @@
 package main;
 
-import gameMapGenerator.GameMapGenerator;
-import gameMapGenerator.GameMapTester;
+import gameMapGenerator.MoveGenerator;
+import gameMapGenerator.TestGenerator;
 import javafx.application.Platform;
 import javafx.fxml.FXML;
 import javafx.fxml.Initializable;
-import javafx.scene.image.Image;
 import javafx.scene.input.KeyEvent;
 import javafx.scene.layout.VBox;
 import mapDrawer.GameMapDrawer;
 import model.GameMap;
-import model.Meadow;
 import model.Move;
-import model.Wall;
 
 import java.net.URL;
 import java.util.ResourceBundle;
@@ -29,7 +26,7 @@ public class MainController implements Initializable
     public void initialize(URL location, ResourceBundle resources)
     {
         new Thread(() -> {
-            gameMap = GameMapGenerator.generate(15, 15, 6, 25);
+            gameMap = MoveGenerator.generate(15, 15, 8, 30, 30);
 
             Platform.runLater(() -> {
                 gameMapDrawer = new GameMapDrawer(mainVBox, gameMap);

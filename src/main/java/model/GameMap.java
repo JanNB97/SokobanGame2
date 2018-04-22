@@ -2,6 +2,7 @@ package model;
 
 import enums.Direction;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Logger;
 
 public class GameMap
@@ -92,7 +93,7 @@ public class GameMap
             {
                 Block block = getBlock(j, i);
 
-                if(block instanceof Meadow && ((Meadow) block).getBoxDestination() != null && ((Meadow) block).getBox() == null)
+                if(block instanceof Meadow && ((Meadow) block).getBoxDestination() == null && ((Meadow) block).getBox() != null)
                 {
                     return false;
                 }
@@ -220,6 +221,26 @@ public class GameMap
         }
 
         return allBlocks;
+    }
+
+    public List<Position> getAllBoxPos()
+    {
+        ArrayList<Position> allPositions = new ArrayList<>();
+
+        for(int i = 0; i < maxHeight; i++)
+        {
+            for(int j = 0; j < maxWidth; j++)
+            {
+                Block block = getBlock(j, i);
+
+                if(block instanceof Meadow && ((Meadow) block).getBox() != null)
+                {
+                    allPositions.add(new Position(block.getX(), block.getY()));
+                }
+            }
+        }
+
+        return allPositions;
     }
 
 
